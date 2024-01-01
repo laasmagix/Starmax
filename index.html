@@ -9,7 +9,7 @@
   <body>
     <div class="wrapper">
       <main class="page">
-        <section class="page__main-block main-block">
+        <section class="page__main-block main-block" id="first">
           <div class="main-block__container">
             <div class="main-block__content">
               <div class="main-block__title-block">
@@ -29,22 +29,54 @@
             </div>
             <div class="main-block__bottom">
               <div class="main-block__more">
-                <a href="#">Дізнатись більше</a>
+                <a href="#second">Дізнатись більше</a>
               </div>
               <div class="main-block__arrow">
-                <a href="#"><img src="img/main/arrow.svg" alt="Arrow" /></a>
+                <a href="#second"
+                  ><img src="img/main/arrow.svg" alt="Arrow"
+                /></a>
               </div>
             </div>
           </div>
           <div class="main-block__numbers numbers">
-            <span><a href="">01</a></span>
-            <span><a href="">02</a></span>
-            <span><a href="">03</a></span>
-            <span><a href="">04</a></span>
-            <span><a href="">05</a></span>
+            <span><a href="#first">01</a></span>
+            <span><a href="#second">02</a></span>
+            <span><a href="#third">03</a></span>
+            <span><a href="#fourth">04</a></span>
+            <span><a href="#fifth">05</a></span>
           </div>
           <div class="main-block__bg _ibg">
             <img src="img/main/bg.jpg" alt="Background" />
+          </div>
+        </section>
+
+        <section class="page__video video" id="second">
+          <div class="video__container">
+            <div class="video__body">
+              <div class="video__image">
+                <img src="img/video/image.jpg" alt="Image" />
+              </div>
+              <div class="video__decor">
+                <a href="#"
+                  ><img src="img/video/play.svg" alt="Play Stop Button"
+                /></a>
+              </div>
+            </div>
+            <div class="video__content">
+              <h2 class="video__title">Відеоогляд</h2>
+              <div class="video__text">
+                Подивіться наше коротке відео та дізнайтесь більше про кріплення
+                Starmax!
+              </div>
+              <a href="#" class="video__button">Хочу Starmax</a>
+            </div>
+          </div>
+          <div class="video__numbers numbers">
+            <span><a href="#first">01</a></span>
+            <span><a href="#second">02</a></span>
+            <span><a href="#third">03</a></span>
+            <span><a href="#fourth">04</a></span>
+            <span><a href="#fifth">05</a></span>
           </div>
         </section>
       </main>

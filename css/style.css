@@ -95,7 +95,6 @@ h6 {
 /* ===================================================================================== */
 body {
   font-family: "Open Sans";
-  background-color: #161616;
   font-weight: 700;
   color: #fff;
 }
@@ -116,6 +115,7 @@ body {
     max-width: 970px;
   }
 }
+
 /* Tablet */
 @media (max-width: 990.98px) {
   [class*="__container"] {
@@ -162,7 +162,7 @@ body {
   flex-direction: column;
 }
 .main-block__content {
-  margin-bottom: 140px;
+  margin-bottom: 100px;
   flex: 1 1 auto;
 }
 .main-block__title-block {
@@ -272,7 +272,7 @@ body {
 }
 .main-block__numbers {
 }
-.main-block__numbers span {
+.numbers span {
   display: inline-block;
   transform: rotate(90deg);
 }
@@ -295,9 +295,7 @@ body {
 .main-block__numbers span:nth-child(1) {
   color: #fff;
   text-align: center;
-  font-family: "Open Sans";
   font-size: 25px;
-  font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 3.125px;
@@ -313,11 +311,6 @@ body {
 @media (max-width: 1299.98px) {
   .main-block__title-block {
     font-size: 90px;
-  }
-}
-@media (max-width: 1070.98px) {
-  [class*="__container"] {
-    max-width: 660px;
   }
 }
 @media (max-width: 990.98px) {
@@ -381,6 +374,160 @@ body {
   }
   .main-block__text {
     font-size: 16px;
+  }
+}
+@media (max-width: 1070.98px) {
+  [class*="__container"] {
+    max-width: 660px;
+  }
+}
+/* ================================================================================ */
+/* ======================================== Video ======================================== */
+.page__video {
+}
+.video {
+  padding-top: 105px;
+  padding-bottom: 50px;
+  background-color: #161616;
+  position: relative;
+}
+.video__container {
+  display: flex;
+  align-items: center;
+  gap: 63px;
+}
+.video__body {
+  flex: 0 0 50%;
+  position: relative;
+}
+.video__image {
+  position: relative;
+  padding: 0px 0px 64.5% 0px;
+}
+.video__image:after {
+  content: url(/img/video/label.svg);
+  position: absolute;
+  right: -25px;
+  top: 0;
+  z-index: 10;
+}
+.video__image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  filter: blur(3px);
+  opacity: 0.56;
+  transition: all 0.5s ease;
+}
+.video__body:hover .video__image img {
+  filter: blur(0px);
+  opacity: 1;
+}
+.video__decor {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex: 0 0 96px;
+}
+.video__decor img {
+  max-width: 100%;
+}
+.video__content {
+  padding-top: 86px;
+  flex: 1 1 auto;
+  z-index: 5;
+}
+.video__title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  margin-bottom: 30px;
+}
+.video__text {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  letter-spacing: 2.25px;
+  max-width: 365px;
+  margin-bottom: 30px;
+}
+.video__button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid #ffffff4f;
+  background-color: #ffffff00;
+  backdrop-filter: blur(4.5px);
+  padding: 15px 60px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.53px;
+  max-width: 270px;
+  transition: all 0.3s ease;
+}
+.video__button:hover {
+  background-color: #ffffff27;
+}
+.video__numbers {
+}
+.video__numbers span:nth-child(2) {
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 3.125px;
+}
+@media (max-width: 1070.98px) {
+  .video {
+    padding-top: 70px;
+  }
+  .video__container {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    gap: 40px;
+  }
+  .video__content {
+    padding-top: 0;
+    text-align: center;
+  }
+  .video__title {
+    margin-bottom: 20px;
+  }
+  .video__text {
+    max-width: none;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 990.98px) {
+  .video {
+    padding-top: 50px;
+  }
+}
+@media (max-width: 767.98px) {
+  .video {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .video__image:after {
+    display: none;
+  }
+}
+@media (max-width: 570.98px) {
+  .video__button {
+    display: flex;
+    max-width: none;
   }
 }
 /* ================================================================================ */
