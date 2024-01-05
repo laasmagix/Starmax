@@ -715,6 +715,7 @@ body {
   top: 50%;
   right: -1%;
   transform: translate(0, -50%);
+  overflow: hidden;
 }
 .buy__decor img {
   /* max-width: 100%; */
@@ -791,3 +792,57 @@ body {
   }
 }
 /* ================================================================================ */
+/* ======================================== Cards ======================================== */
+.page__cards {
+}
+.cards {
+}
+.cards__container {
+  padding-top: 58px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+}
+.cards__container .cards__item:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -38px;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom;
+  transition: transform 0.3s ease-out;
+}
+.cards__container .cards__item:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom;
+}
+.cards__items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(auto, 359px));
+  justify-content: center;
+  gap: 49px;
+  position: relative;
+}
+.cards__item {
+  max-width: 359px;
+  position: relative;
+}
+.cards__item img {
+  border-radius: 5px;
+  max-width: 100%;
+}
+@media (max-width: 1070.98px) {
+  .cards__items {
+    grid-template-columns: repeat(2, minmax(auto, 359px));
+  }
+  .cards__container .cards__item:after {
+    display: none;
+  }
+}
+@media (max-width: 570.98px) {
+  .cards__items {
+    grid-template-columns: repeat(1, minmax(auto, 359px));
+  }
+}
